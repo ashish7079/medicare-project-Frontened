@@ -544,6 +544,38 @@ Chats
 )
 }
 
+{/* LOGIN */}
+
+{
+!token && (
+<button
+  onClick={() => {
+    navigate("/login");
+    setMobile(false);
+  }}
+  className="bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-2xl"
+>
+  Login
+</button>
+)
+}
+
+{/* REGISTER */}
+
+{
+!token && (
+<button
+  onClick={() => {
+    navigate("/register");
+    setMobile(false);
+  }}
+  className="border border-cyan-400 text-cyan-400 py-4 rounded-2xl"
+>
+  Register
+</button>
+)
+}
+
 {
 token && (
 
