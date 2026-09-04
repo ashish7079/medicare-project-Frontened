@@ -55,7 +55,7 @@ function Cart() {
 
               {/* Image */}
               <img
-                src={`http://localhost:8080/medicine/${item.medicineimg}`}
+              src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.medicineimg}`}
                 alt=""
                 className="w-32 h-32 object-cover rounded-xl"
               />

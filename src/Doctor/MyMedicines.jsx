@@ -97,8 +97,7 @@ function MyMedicines() {
               {/* IMAGE */}
 
               <img
-
-src={`http://localhost:8080/medicine/${item.medicineimg}`}
+src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.medicineimg}`}
 
                 alt=""
 

@@ -181,7 +181,7 @@ className="group bg-white/10 backdrop-blur-xl border border-white/10 rounded-[32
 
 <img
 
-src={`http://localhost:8080/medicine/${item.medicineimg}`}
+src={`https://res.cloudinary.com/pfpskbkx/image/upload/medicine/${item.medicineimg}`}
 
 alt=""
 
