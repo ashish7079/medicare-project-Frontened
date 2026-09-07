@@ -16,6 +16,23 @@ function MyDoctors() {
   const authId =
         localStorage.getItem("id");
 
+        const doctorImages = {
+  "1779870968187_Doctor5.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804405/1779870968187_Doctor5.jpg",
+
+  "1779871374041_Dr1.avif":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804405/1779871374041_Dr1.avif",
+
+  "1779873288041_Doctor3.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804433/1779873288041_Doctor3.jpg",
+
+  "1779873498273_Doctor.avif":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804433/1779873498273_Doctor.avif",
+
+  "1779873974823_Screenshot 2026-05-27 145518.png":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804441/1779873974823_Screenshot_2026-05-27_145518.png",
+};
+
   useEffect(() => {
 
     fetchDoctors();
@@ -107,7 +124,7 @@ function MyDoctors() {
 
               <img
 
-src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.file1Path.replaceAll(" ", "_")}`}
+                src={doctorImages[item.file1Path]}
 
                 alt=""
 
