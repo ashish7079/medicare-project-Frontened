@@ -39,6 +39,23 @@ function DoctorDetails() {
     "https://res.cloudinary.com/pfpskbkx/image/upload/v1788804441/1779873974823_Screenshot_2026-05-27_145518.png",
 };
 
+const certificateImages = {
+  "1779870968191_sonam_sharma_certificate_compressed.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788807545/1779870968191_sonam_sharma_certificate_compressed.jpg",
+
+  "1779871374041_dr_aman_jha_certificate_compressed.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788807546/1779871374041_dr_aman_jha_certificate_compressed.jpg",
+
+  "1779873288041_compressed_certificate.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788807547/1779873288041_compressed_certificate.jpg",
+
+  "1779873498273_dr_vivek_singh_certificate_compressed.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788807548/1779873498273_dr_vivek_singh_certificate_compressed.jpg",
+
+  "1779873974823_girl_certificate_compressed.jpg":
+    "https://res.cloudinary.com/pfpskbkx/image/upload/v1788807780/1779873974823_girl_certificate_compressed.jpg",
+};
+
   const { id } =
         useParams();
 
@@ -293,7 +310,7 @@ Certificate
 
 <img
 
-src={`http://localhost:8080/uploads/certificates/${doctor.file2Path}`}
+src={certificateImages[doctor.file2Path]}
 
 alt=""
 
