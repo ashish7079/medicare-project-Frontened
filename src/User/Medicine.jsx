@@ -181,8 +181,7 @@ className="group bg-white/10 backdrop-blur-xl border border-white/10 rounded-[32
 
 <img
 
-src={`https://res.cloudinary.com/pfpskbkx/image/upload/medicine/${item.medicineimg}`}
-
+src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.medicineimg}`}
 alt=""
 
 className="w-full h-[300px] object-contain group-hover:scale-105 transition-all duration-500 cursor-pointer"

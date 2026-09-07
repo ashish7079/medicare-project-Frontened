@@ -54,7 +54,7 @@ function SingleMedicine() {
         <div className="p-6 flex justify-center items-center bg-gray-50">
 
           <img
-            src={`https://res.cloudinary.com/pfpskbkx/image/upload/medicine/${medicine.medicineimg}`}
+           src={`https://res.cloudinary.com/pfpskbkx/image/upload/${medicine.medicineimg}`}
             alt=""
             className="w-full h-[500px] object-cover rounded-2xl hover:scale-105 transition duration-500"
           />
