@@ -107,7 +107,7 @@ function MyDoctors() {
 
               <img
 
-src={`http://localhost:8080/uploads/profile/${item.file1Path}`}
+src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.file1Path.replaceAll(" ", "_")}`}
 
                 alt=""
 
