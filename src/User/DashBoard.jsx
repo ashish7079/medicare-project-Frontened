@@ -232,7 +232,7 @@ className="bg-[#07163F] border border-cyan-500/20 rounded-[28px] overflow-hidden
 
 <img
 
-src={`http://localhost:8080/uploads/profile/${item.file1Path}`}
+src={`https://res.cloudinary.com/pfpskbkx/image/upload/${item.file1Path.replaceAll(" ", "_")}`}
 
 alt=""
 
