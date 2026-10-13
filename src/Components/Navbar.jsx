@@ -317,94 +317,65 @@ Register
 {/* PROFILE */}
 {/* ========================= */}
 
-{
-profile && (
+{profile && (
+  <div className="relative flex items-center gap-4">
 
-<div className="relative">
+    {/* PROFILE IMAGE */}
+    <div
+      onClick={() => setOpen(!open)}
+      className="cursor-pointer"
+    >
+      {profile.profileImage ? (
+        <img
+          src={`http://localhost:8080/uploads/profile/${profile.profileImage}`}
+          alt="Profile"
+          className="w-14 h-14 rounded-full object-cover border-2 border-cyan-400"
+        />
+      ) : (
+        <div className="w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex justify-center items-center text-white text-2xl">
+          🙂
+        </div>
+      )}
+    </div>
 
-<div
-onClick={() =>
-setOpen(!open)
-}
-className="cursor-pointer"
->
+    {/* DESKTOP LOGOUT BUTTON */}
+   
 
-{
-profile.profileImage
-?
+    {/* PROFILE DROPDOWN */}
+    {open && (
+      <div className="absolute right-0 top-20 w-[320px] bg-slate-900 border border-white/10 rounded-3xl p-6 shadow-2xl z-50">
 
-<img
+        <h1 className="text-white text-2xl font-black">
+          {profile.userName}
+        </h1>
 
-src={`http://localhost:8080/uploads/profile/${profile.profileImage}`}
+        <p className="text-gray-400 mt-2">
+          {profile.emailId}
+        </p>
 
-alt=""
+        <button
+          onClick={() => {
+            navigate("/profile");
+            setOpen(false);
+          }}
+          className="w-full mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-2xl text-white font-bold"
+        >
+          Open Profile
+        </button>
 
-className="w-14 h-14 rounded-full object-cover border-2 border-cyan-400"
-/>
+        <button
+          onClick={logout}
+          className="w-full mt-4 bg-red-500 hover:bg-red-600 py-4 rounded-2xl text-white font-bold"
+        >
+          Logout
+        </button>
 
-:
+      </div>
+    )}
 
-<div className="w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex justify-center items-center text-white text-2xl">
+  </div>
+)}
 
-🙂
-
-</div>
-}
-
-</div>
-
-{
-open && (
-
-<div className="absolute right-0 top-20 w-[320px] bg-slate-900 border border-white/10 rounded-3xl p-6 shadow-2xl">
-
-<h1 className="text-white text-2xl font-black">
-
-{profile.userName}
-
-</h1>
-
-<p className="text-gray-400 mt-2">
-
-{profile.emailId}
-
-</p>
-
-<button
-
-onClick={() => {
-
-navigate("/profile");
-
-setOpen(false);
-
-}}
-
-className="w-full mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-2xl text-white font-bold"
->
-
-Open Profile
-
-</button>
-
-<button
-
-onClick={logout}
-
-className="w-full mt-4 bg-red-500 py-4 rounded-2xl text-white font-bold"
->
-
-Logout
-
-</button>
-
-</div>
-)
-}
-
-</div>
-)
-}
 
 </div>
 
