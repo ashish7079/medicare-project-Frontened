@@ -87,14 +87,15 @@ function Navbar() {
   // LOGOUT
   // =========================
 
-  const logout = () => {
 
-    localStorage.clear();
+const logout = () => {
+  localStorage.clear();
+  setProfile(null);
+  setOpen(false);
+  setMobile(false);
+  navigate("/login", { replace: true });
+};
 
-    navigate("/login");
-
-    window.location.reload();
-  };
 
   return (
 
