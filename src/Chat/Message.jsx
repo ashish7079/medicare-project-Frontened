@@ -95,9 +95,9 @@ function Message() {
 
       webSocketFactory: () =>
 
-        new SockJS(
-          "http://localhost:8080/ws"
-        ),
+      new SockJS(
+  "https://medicare-project-backend.onrender.com/ws"
+),
 
       reconnectDelay: 5000,
 
